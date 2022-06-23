@@ -1,0 +1,45 @@
+﻿@model CRUD_Application.Models.Employee
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="text-center text-primary">Add Employee</h1>
+                    <p class="test-center text-success">@TempData["message"]</p>
+                </div>
+                <div class="card-body">
+                    <form method="post" asp-action="Create">
+                        <div class="form-group">
+                            <label asp-for="Name"></label>
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                            <input type="text" asp-for="Name" class="form-control" placeholder="Enter Employee Name"/>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Salary"></label>
+                            <span asp-validation-for="Salary" class="text-danger"></span>
+                            <input type="text" asp-for="Salary" class="form-control" placeholder="Enter Employee Salary"/>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="State"></label>
+                            <span asp-validation-for="State" class="text-danger"></span>
+                            <input type="text" asp-for="State" class="form-control" placeholder="Enter Employee State"/>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="City"></label>
+                            <span asp-validation-for="City" class="text-danger"></span>
+                            <input type="text" asp-for="City" class="form-control" placeholder="Enter Employee City"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Submit" class="btn btn-sm btn-outline-success float-end m-1"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
